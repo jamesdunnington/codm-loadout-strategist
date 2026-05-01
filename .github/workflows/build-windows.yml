@@ -5,10 +5,13 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write
     
     steps:
     - uses: actions/checkout@v4
@@ -33,3 +36,28 @@ jobs:
         name: windows-app
         path: release/*.exe
         if-no-files-found: warn
+        retention-days: 30
+    
+    - name: Create Release
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "release/*.exe"
+        tag: v${{ github.run_number }}
+        name: Release v${{ github.run_number }}
+        body: |
+          CODM Loadout Strategist - Windows Build
+          
+          ## Downloads
+          - **CODM Loadout Strategist Setup.exe** - Installer version
+          - **CODM Loadout Strategist.exe** - Portable version
+          
+          ## Installation
+          1. Download the Setup.exe for installation
+          2. Or download the portable .exe to run without installing
+          
+          Built from commit: ${{ github.sha }}
+        draft: false
+        prerelease: false
+        allowUpdates: true
+        generateReleaseNotes: false
