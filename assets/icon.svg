@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#0a0a0a"/>
+  <rect x="20" y="20" width="216" height="216" fill="none" stroke="#00FF00" stroke-width="8"/>
+  <text x="128" y="110" text-anchor="middle" fill="#00FF00" font-family="Arial Black, Arial, sans-serif" font-size="60" font-weight="900">CODM</text>
+  <text x="128" y="160" text-anchor="middle" fill="#FFFF00" font-family="Arial Black, Arial, sans-serif" font-size="28" font-weight="700">LOADOUT</text>
+  <text x="128" y="190" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="600">STRATEGIST</text>
+  <circle cx="128" cy="220" r="4" fill="#00FF00"/>
+</svg>

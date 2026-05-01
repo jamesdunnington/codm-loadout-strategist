@@ -1,0 +1,23 @@
+{
+  "red_perks": [
+    { "id": "lightweight", "name": "Lightweight", "description": "Increases sprint speed", "category": "mobility", "stealth_compatible": false },
+    { "id": "persistent", "name": "Persistent", "description": "Scorestreaks don't reset on death", "category": "tactical", "stealth_compatible": true },
+    { "id": "flak_jacket", "name": "Flak Jacket", "description": "Reduces explosive damage", "category": "defense", "stealth_compatible": true },
+    { "id": "agile", "name": "Agile", "description": "Faster ADS after sprinting", "category": "mobility", "stealth_compatible": false },
+    { "id": "ghost", "name": "Ghost", "description": "Invisible to enemy UAVs", "category": "stealth", "stealth_compatible": true }
+  ],
+  "green_perks": [
+    { "id": "toughness", "name": "Toughness", "description": "Reduces flinch when hit", "category": "combat", "stealth_compatible": true },
+    { "id": "vulture", "name": "Vulture", "description": "Resupply ammo from dead enemies", "category": "tactical", "stealth_compatible": true },
+    { "id": "tracker", "name": "Tracker", "description": "See enemy footprints", "category": "tactical", "stealth_compatible": false },
+    { "id": "cold_blooded", "name": "Cold-Blooded", "description": "Invisible to AI scorestreaks", "category": "stealth", "stealth_compatible": true },
+    { "id": "quick_fix", "name": "Quick Fix", "description": "Faster health regen", "category": "combat", "stealth_compatible": true }
+  ],
+  "blue_perks": [
+    { "id": "dead_silence", "name": "Dead Silence", "description": "Silent movement", "category": "stealth", "stealth_compatible": true },
+    { "id": "alert", "name": "Alert", "description": "Enemy footsteps more audible", "category": "tactical", "stealth_compatible": false },
+    { "id": "demo_expert", "name": "Demo Expert", "description": "Increased explosive damage", "category": "combat", "stealth_compatible": false },
+    { "id": "tactical_mask", "name": "Tactical Mask", "description": "Reduced flash/stun effect", "category": "defense", "stealth_compatible": true },
+    { "id": "engineer", "name": "Engineer", "description": "See enemy equipment through walls", "category": "tactical", "stealth_compatible": true }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scorestreaks": [
+    { "id": "uav", "name": "UAV", "cost": 400, "category": "support", "stealth_compatible": true },
+    { "id": "care_package", "name": "Care Package", "cost": 550, "category": "support", "stealth_compatible": true },
+    { "id": "counter_uav", "name": "Counter-UAV", "cost": 600, "category": "support", "stealth_compatible": true },
+    { "id": "hunter_killer", "name": "Hunter Killer Drone", "cost": 500, "category": "offensive", "stealth_compatible": false },
+    { "id": "predator", "name": "Predator Missile", "cost": 700, "category": "offensive", "stealth_compatible": false },
+    { "id": "sentry_gun", "name": "Sentry Gun", "cost": 800, "category": "defensive", "stealth_compatible": true },
+    { "id": "stealth_chopper", "name": "Stealth Chopper", "cost": 1000, "category": "offensive", "stealth_compatible": false },
+    { "id": "vtol", "name": "VTOL", "cost": 1600, "category": "offensive", "stealth_compatible": false },
+    { "id": "cluster_strike", "name": "Cluster Strike", "cost": 750, "category": "offensive", "stealth_compatible": false },
+    { "id": "advanced_uav", "name": "Advanced UAV", "cost": 1200, "category": "support", "stealth_compatible": true }
+  ]
+}

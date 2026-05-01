@@ -1,0 +1,568 @@
+{
+  "assault_rifles": [
+    {
+      "id": "kilo141",
+      "name": "Kilo 141",
+      "tier": "S",
+      "base_stats": {
+        "damage": 75,
+        "range": 65,
+        "mobility": 60,
+        "accuracy": 70,
+        "fire_rate": 75,
+        "control": 65
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} }
+        ],
+        "barrel": [
+          { "name": "OWC Marksman", "stats": {"range": 12, "control": 8, "mobility": -6, "ads_speed": -5} },
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "YKM Integral Suppressor", "stats": {"range": 8, "ads_speed": 3, "mobility": -2} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} },
+          { "name": "Tactical Scope", "stats": {"ads_speed": -5, "accuracy": 3} },
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} },
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} },
+          { "name": "Ranger Foregrip", "stats": {"control": 10, "ads_speed": -6, "mobility": -4} }
+        ],
+        "magazine": [
+          { "name": "40 Round Mag", "stats": {"mobility": -2, "ads_speed": -1} },
+          { "name": "50 Round Mag", "stats": {"mobility": -4, "ads_speed": -3} },
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} },
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "RTC Steady Stock", "stats": {"control": 8, "ads_speed": -4, "mobility": -3} }
+        ]
+      }
+    },
+    {
+      "id": "ak47",
+      "name": "AK-47",
+      "tier": "A",
+      "base_stats": {
+        "damage": 85,
+        "range": 70,
+        "mobility": 55,
+        "accuracy": 65,
+        "fire_rate": 65,
+        "control": 60
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "MIP Light Flash Guard", "stats": {"control": 5, "mobility": 1} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} },
+          { "name": "Tactical Suppressor", "stats": {"range": 3, "ads_speed": 2} }
+        ],
+        "barrel": [
+          { "name": "OWC Marksman", "stats": {"range": 12, "control": 8, "mobility": -6, "ads_speed": -5} },
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} },
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} },
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "40 Round Mag", "stats": {"mobility": -2, "ads_speed": -1} },
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} },
+          { "name": "RTC Steady Stock", "stats": {"control": 8, "ads_speed": -4, "mobility": -3} }
+        ]
+      }
+    },
+    {
+      "id": "m4",
+      "name": "M4",
+      "tier": "A",
+      "base_stats": {
+        "damage": 70,
+        "range": 60,
+        "mobility": 65,
+        "accuracy": 75,
+        "fire_rate": 70,
+        "control": 70
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "OWC Ranger", "stats": {"range": 10, "control": 5, "ads_speed": -4} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} },
+          { "name": "Tactical Scope", "stats": {"ads_speed": -5, "accuracy": 3} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} },
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "40 Round Mag", "stats": {"mobility": -2, "ads_speed": -1} },
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} },
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} }
+        ]
+      }
+    },
+    {
+      "id": "asm10",
+      "name": "ASM10",
+      "tier": "B",
+      "base_stats": {
+        "damage": 80,
+        "range": 68,
+        "mobility": 58,
+        "accuracy": 68,
+        "fire_rate": 60,
+        "control": 62
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} },
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "barrel": [
+          { "name": "OWC Marksman", "stats": {"range": 12, "control": 8, "mobility": -6, "ads_speed": -5} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} }
+        ],
+        "magazine": [
+          { "name": "40 Round Mag", "stats": {"mobility": -2, "ads_speed": -1} }
+        ],
+        "stock": [
+          { "name": "RTC Steady Stock", "stats": {"control": 8, "ads_speed": -4, "mobility": -3} }
+        ]
+      }
+    }
+  ],
+  "smgs": [
+    {
+      "id": "fennec",
+      "name": "Fennec",
+      "tier": "S",
+      "base_stats": {
+        "damage": 65,
+        "range": 45,
+        "mobility": 85,
+        "accuracy": 55,
+        "fire_rate": 95,
+        "control": 50
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "YKM Integral Suppressor", "stats": {"range": 8, "ads_speed": 3, "mobility": -2} },
+          { "name": "RTC Recon", "stats": {"range": 5, "control": 3, "ads_speed": -2} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} },
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} },
+          { "name": "Rubberized Grip", "stats": {"control": 5, "ads_speed": 1} }
+        ],
+        "magazine": [
+          { "name": "40 Round Extended", "stats": {"mobility": -2, "ads_speed": -1} },
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} },
+          { "name": "45 Round Mag", "stats": {"mobility": -3, "ads_speed": -2} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} },
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "YKM Combat Stock", "stats": {"control": 5, "ads_speed": 3} }
+        ]
+      }
+    },
+    {
+      "id": "qq9",
+      "name": "QQ9",
+      "tier": "S",
+      "base_stats": {
+        "damage": 68,
+        "range": 48,
+        "mobility": 82,
+        "accuracy": 58,
+        "fire_rate": 88,
+        "control": 55
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "OWC Marksman", "stats": {"range": 12, "control": 8, "mobility": -6, "ads_speed": -5} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} },
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "40 Round Mag", "stats": {"mobility": -2, "ads_speed": -1} },
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} },
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} }
+        ]
+      }
+    },
+    {
+      "id": "hg40",
+      "name": "HG 40",
+      "tier": "A",
+      "base_stats": {
+        "damage": 72,
+        "range": 52,
+        "mobility": 75,
+        "accuracy": 65,
+        "fire_rate": 72,
+        "control": 62
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "RTC Recon", "stats": {"range": 5, "control": 3, "ads_speed": -2} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} }
+        ],
+        "underbarrel": [
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} }
+        ]
+      }
+    },
+    {
+      "id": "mx9",
+      "name": "MX9",
+      "tier": "A",
+      "base_stats": {
+        "damage": 70,
+        "range": 50,
+        "mobility": 78,
+        "accuracy": 62,
+        "fire_rate": 80,
+        "control": 58
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Rubberized Grip", "stats": {"control": 5, "ads_speed": 1} }
+        ],
+        "magazine": [
+          { "name": "40 Round Mag", "stats": {"mobility": -2, "ads_speed": -1} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} }
+        ]
+      }
+    },
+    {
+      "id": "ppsh",
+      "name": "PPSh-41",
+      "tier": "B",
+      "base_stats": {
+        "damage": 65,
+        "range": 42,
+        "mobility": 80,
+        "accuracy": 55,
+        "fire_rate": 90,
+        "control": 52
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "55 Round Drum", "stats": {"mobility": -5, "ads_speed": -4} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} }
+        ]
+      }
+    }
+  ],
+  "lmgs": [
+    {
+      "id": "holger26",
+      "name": "Holger 26",
+      "tier": "A",
+      "base_stats": {
+        "damage": 72,
+        "range": 68,
+        "mobility": 55,
+        "accuracy": 68,
+        "fire_rate": 72,
+        "control": 65
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "OWC Marksman", "stats": {"range": 12, "control": 8, "mobility": -6, "ads_speed": -5} }
+        ],
+        "optic": [
+          { "name": "Tactical Scope", "stats": {"ads_speed": -5, "accuracy": 3} },
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} },
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "100 Round Belt", "stats": {"mobility": -6, "ads_speed": -5} },
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} },
+          { "name": "RTC Steady Stock", "stats": {"control": 8, "ads_speed": -4, "mobility": -3} }
+        ]
+      }
+    }
+  ],
+  "sniper_rifles": [
+    {
+      "id": "dlq33",
+      "name": "DL Q33",
+      "tier": "S",
+      "base_stats": {
+        "damage": 95,
+        "range": 95,
+        "mobility": 35,
+        "accuracy": 85,
+        "fire_rate": 25,
+        "control": 60
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "RTC Recon", "stats": {"range": 5, "control": 3, "ads_speed": -2} }
+        ],
+        "optic": [
+          { "name": "Tactical Scope", "stats": {"ads_speed": -5, "accuracy": 3} },
+          { "name": "DL Q33 Default Scope", "stats": {} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} }
+        ],
+        "magazine": [
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "RTC Steady Stock", "stats": {"control": 8, "ads_speed": -4, "mobility": -3} },
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} }
+        ]
+      }
+    },
+    {
+      "id": "locus",
+      "name": "Locus",
+      "tier": "A",
+      "base_stats": {
+        "damage": 90,
+        "range": 90,
+        "mobility": 40,
+        "accuracy": 80,
+        "fire_rate": 30,
+        "control": 62
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} }
+        ],
+        "barrel": [
+          { "name": "RTC Recon", "stats": {"range": 5, "control": 3, "ads_speed": -2} }
+        ],
+        "optic": [
+          { "name": "Tactical Scope", "stats": {"ads_speed": -5, "accuracy": 3} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} }
+        ],
+        "magazine": [
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} }
+        ]
+      }
+    }
+  ],
+  "shotguns": [
+    {
+      "id": "by15",
+      "name": "BY15",
+      "tier": "A",
+      "base_stats": {
+        "damage": 90,
+        "range": 40,
+        "mobility": 70,
+        "accuracy": 55,
+        "fire_rate": 35,
+        "control": 50
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Choke", "stats": {"range": 8, "accuracy": 5, "mobility": -2} },
+          { "name": "Marauder Suppressor", "stats": {"range": 10, "control": 3, "mobility": -4} }
+        ],
+        "barrel": [
+          { "name": "Light Barrel", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "Extended Mag", "stats": {"mobility": -2} }
+        ],
+        "stock": [
+          { "name": "No Stock", "stats": {"ads_speed": 8, "mobility": 8, "control": -8} }
+        ]
+      }
+    },
+    {
+      "id": "hs0405",
+      "name": "HS0405",
+      "tier": "B",
+      "base_stats": {
+        "damage": 95,
+        "range": 45,
+        "mobility": 60,
+        "accuracy": 50,
+        "fire_rate": 20,
+        "control": 45
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Choke", "stats": {"range": 8, "accuracy": 5, "mobility": -2} }
+        ],
+        "barrel": [
+          { "name": "Light Barrel", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Merc Foregrip", "stats": {"control": 6, "ads_speed": -1, "mobility": 2} }
+        ],
+        "magazine": [
+          { "name": "Fast Reload", "stats": {"reload_speed": 15, "mobility": 1} }
+        ],
+        "stock": [
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} }
+        ]
+      }
+    }
+  ],
+  "marksman_rifles": [
+    {
+      "id": "spr208",
+      "name": "SP-R 208",
+      "tier": "S",
+      "base_stats": {
+        "damage": 85,
+        "range": 75,
+        "mobility": 60,
+        "accuracy": 75,
+        "fire_rate": 40,
+        "control": 58
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "RTC Compensator", "stats": {"control": 8, "mobility": -3} }
+        ],
+        "barrel": [
+          { "name": "MIP Light Barrel", "stats": {"ads_speed": 8, "mobility": 5, "range": -3} },
+          { "name": "OWC Marksman", "stats": {"range": 12, "control": 8, "mobility": -6, "ads_speed": -5} }
+        ],
+        "optic": [
+          { "name": "Tactical Scope", "stats": {"ads_speed": -5, "accuracy": 3} },
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} }
+        ],
+        "underbarrel": [
+          { "name": "Strike Foregrip", "stats": {"control": 8, "ads_speed": -3, "mobility": -2} }
+        ],
+        "magazine": [
+          { "name": "10 Round Mag", "stats": {"mobility": 1, "ads_speed": 2} }
+        ],
+        "stock": [
+          { "name": "YKM Light Stock", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "RTC Steady Stock", "stats": {"control": 8, "ads_speed": -4, "mobility": -3} }
+        ]
+      }
+    }
+  ]
+}

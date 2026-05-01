@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --toxic-green: #00FF00;
+  --sharp-yellow: #FFFF00;
+  --deep-black: #0a0a0a;
+  --dark-grey: #1a1a1a;
+  --med-grey: #2a2a2a;
+  --white: #ffffff;
+  --red: #ff3333;
+  --cyan: #00ffff;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background-color: var(--deep-black);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Neo-Brutalist Utilities */
+.brutal-border {
+  border: 3px solid var(--white);
+}
+
+.brutal-border-green {
+  border: 3px solid var(--toxic-green);
+}
+
+.brutal-border-yellow {
+  border: 3px solid var(--sharp-yellow);
+}
+
+.brutal-shadow {
+  box-shadow: 4px 4px 0px var(--white);
+}
+
+.brutal-shadow-green {
+  box-shadow: 4px 4px 0px var(--toxic-green);
+}
+
+.brutal-shadow-yellow {
+  box-shadow: 4px 4px 0px var(--sharp-yellow);
+}
+
+.brutal-btn {
+  background: var(--toxic-green);
+  color: var(--deep-black);
+  border: 3px solid var(--white);
+  box-shadow: 4px 4px 0px var(--white);
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  padding: 12px 24px;
+}
+
+.brutal-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--white);
+}
+
+.brutal-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px var(--white);
+}
+
+.brutal-btn-yellow {
+  background: var(--sharp-yellow);
+}
+
+.brutal-btn-dark {
+  background: var(--dark-grey);
+  color: var(--toxic-green);
+  border-color: var(--toxic-green);
+  box-shadow: 4px 4px 0px var(--toxic-green);
+}
+
+.brutal-btn-dark:hover {
+  box-shadow: 2px 2px 0px var(--toxic-green);
+}
+
+.brutal-btn-dark:active {
+  box-shadow: 0px 0px 0px var(--toxic-green);
+}
+
+.brutal-card {
+  background: var(--dark-grey);
+  border: 3px solid var(--toxic-green);
+  box-shadow: 4px 4px 0px var(--toxic-green);
+  padding: 20px;
+}
+
+/* Mode selector buttons */
+.mode-btn {
+  background: var(--med-grey);
+  color: var(--white);
+  border: 3px solid var(--white);
+  padding: 12px 20px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 4px 4px 0px var(--white);
+}
+
+.mode-btn:hover {
+  background: var(--dark-grey);
+}
+
+.mode-btn.active {
+  background: var(--toxic-green);
+  color: var(--deep-black);
+  border-color: var(--toxic-green);
+  box-shadow: 4px 4px 0px var(--toxic-green);
+}
+
+.mode-btn.active:hover {
+  background: var(--toxic-green);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep-black);
+  border: 2px solid var(--med-grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--toxic-green);
+  border: 2px solid var(--deep-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sharp-yellow);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.4s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
