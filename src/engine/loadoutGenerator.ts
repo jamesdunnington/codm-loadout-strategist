@@ -1,7 +1,8 @@
 import weaponsData from '../data/weapons.json';
 import perksData from '../data/perks.json';
 import scorestreaksData from '../data/scorestreaks.json';
-import { PlayMode, Weapon, Perk, Scorestreak, GeneratedLoadout, LoadoutAttachment, ModeWeights } from '../types';
+import wildcardsData from '../data/wildcards.json';
+import { PlayMode, Weapon, Perk, Scorestreak, Wildcard, GeneratedLoadout, LoadoutAttachment, ModeWeights } from '../types';
 
 const modeConfigs: Record<PlayMode, ModeWeights> = {
   rush: {
@@ -282,14 +283,42 @@ export function generateLoadout(mode: PlayMode, weaponId?: string): GeneratedLoa
   // 5. Select scorestreaks
   const scorestreaks = selectScorestreaksForMode(mode);
   
+  // 6. Select wildcard
+  const wildcard = selectWildcardForMode(mode);
+  
   return {
     weapon,
     attachments,
     perks,
+    wildcard,
     scorestreaks,
     mode,
     generatedAt: new Date().toISOString(),
   };
+}
+
+function selectWildcardForMode(mode: PlayMode): Wildcard {
+  // Select wildcard based on mode synergy
+  const wildcards = wildcardsData.wildcards;
+  
+  // Mode-specific wildcard preferences
+  const modeWildcards: Record<PlayMode, string[]> = {
+    rush: ['gunsmith', 'perk_1_greed', 'secondary_gunner'],
+    aggro: ['gunsmith', 'perk_2_greed', 'overkill'],
+    stealth: ['perk_3_greed', 'law_breaker', 'tactician'],
+    tactical: ['gunsmith', 'perk_2_greed', 'law_breaker'],
+  };
+  
+  // Try to find a mode-appropriate wildcard
+  const preferredIds = modeWildcards[mode];
+  const preferred = wildcards.find(w => preferredIds.includes(w.id));
+  
+  if (preferred) {
+    return preferred;
+  }
+  
+  // Fallback to random
+  return wildcards[Math.floor(Math.random() * wildcards.length)];
 }
 
 export function formatLoadoutForExport(loadout: GeneratedLoadout): string {
@@ -300,6 +329,9 @@ export function formatLoadoutForExport(loadout: GeneratedLoadout): string {
     ``,
     `ATTACHMENTS:`,
     ...loadout.attachments.map(a => `  - ${a.slot.toUpperCase()}: ${a.name}`),
+    ``,
+    `WILDCARD: ${loadout.wildcard.name}`,
+    `  > ${loadout.wildcard.description}`,
     ``,
     `PERKS:`,
     `  - Red: ${loadout.perks.red.name}`,

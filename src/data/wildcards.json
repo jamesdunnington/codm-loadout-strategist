@@ -1,0 +1,58 @@
+{
+  "wildcards": [
+    {
+      "id": "perk_1_greed",
+      "name": "Perk 1 Greed",
+      "description": "Equip two Red perks",
+      "effect": "extra_red_perk"
+    },
+    {
+      "id": "perk_2_greed",
+      "name": "Perk 2 Greed",
+      "description": "Equip two Green perks",
+      "effect": "extra_green_perk"
+    },
+    {
+      "id": "perk_3_greed",
+      "name": "Perk 3 Greed",
+      "description": "Equip two Blue perks",
+      "effect": "extra_blue_perk"
+    },
+    {
+      "id": "overkill",
+      "name": "Overkill",
+      "description": "Equip a primary weapon in your secondary slot",
+      "effect": "two_primary_weapons"
+    },
+    {
+      "id": "secondary_gunner",
+      "name": "Secondary Gunner",
+      "description": "Secondary weapons get 8 attachments",
+      "effect": "secondary_8_attachments"
+    },
+    {
+      "id": "danger_close",
+      "name": "Danger Close",
+      "description": "Equip two lethal equipment",
+      "effect": "two_lethal"
+    },
+    {
+      "id": "tactician",
+      "name": "Tactician",
+      "description": "Equip two tactical equipment",
+      "effect": "two_tactical"
+    },
+    {
+      "id": "law_breaker",
+      "name": "Law Breaker",
+      "description": "Equip any combination of perks in any slot",
+      "effect": "any_perk_any_slot"
+    },
+    {
+      "id": "gunsmith",
+      "name": "Gunsmith",
+      "description": "Equip up to 8 attachments on primary weapon",
+      "effect": "8_attachments"
+    }
+  ]
+}

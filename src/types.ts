@@ -53,6 +53,13 @@ export interface LoadoutAttachment {
   stats: Record<string, number | undefined>;
 }
 
+export interface Wildcard {
+  id: string;
+  name: string;
+  description: string;
+  effect: string;
+}
+
 export interface GeneratedLoadout {
   weapon: Weapon;
   attachments: LoadoutAttachment[];
@@ -61,6 +68,7 @@ export interface GeneratedLoadout {
     green: Perk;
     blue: Perk;
   };
+  wildcard: Wildcard;
   scorestreaks: Scorestreak[];
   mode: PlayMode;
   generatedAt: string;

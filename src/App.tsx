@@ -203,6 +203,16 @@ function App() {
               </div>
             </div>
 
+            {/* Wildcard */}
+            <div style={styles.section}>
+              <h3 style={styles.sectionHeader}>WILDCARD</h3>
+              <div style={styles.wildcardCard}>
+                <div style={styles.wildcardName}>{loadout.wildcard.name}</div>
+                <div style={styles.wildcardDesc}>{loadout.wildcard.description}</div>
+                <div style={styles.wildcardEffect}>Effect: {loadout.wildcard.effect}</div>
+              </div>
+            </div>
+
             {/* Perks */}
             <div style={styles.section}>
               <h3 style={styles.sectionHeader}>PERKS</h3>
@@ -547,6 +557,31 @@ const styles: Record<string, React.CSSProperties> = {
   perkDesc: {
     fontSize: '0.8rem',
     color: '#888',
+  },
+  wildcardCard: {
+    backgroundColor: '#0a0a0a',
+    border: '2px solid #00ffff',
+    padding: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '8px',
+    maxWidth: '500px',
+  },
+  wildcardName: {
+    fontSize: '1.2rem',
+    fontWeight: 900,
+    color: '#00ffff',
+    textTransform: 'uppercase',
+  },
+  wildcardDesc: {
+    fontSize: '0.95rem',
+    color: '#fff',
+  },
+  wildcardEffect: {
+    fontSize: '0.8rem',
+    color: '#888',
+    fontStyle: 'italic',
+    marginTop: '5px',
   },
   streaksGrid: {
     display: 'flex',
