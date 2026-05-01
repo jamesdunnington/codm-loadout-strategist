@@ -7,11 +7,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/remio/codm-loadout-strategist.git"
+    "url": "https://github.com/jamesdunnington/codm-loadout-strategist.git"
   },
-  "homepage": "https://github.com/remio/codm-loadout-strategist#readme",
+  "homepage": "https://github.com/jamesdunnington/codm-loadout-strategist#readme",
   "bugs": {
-    "url": "https://github.com/remio/codm-loadout-strategist/issues"
+    "url": "https://github.com/jamesdunnington/codm-loadout-strategist/issues"
   },
   "scripts": {
     "dev": "vite",
