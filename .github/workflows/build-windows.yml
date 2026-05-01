@@ -38,9 +38,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: windows-app
-        path: |
-          release/**/*.exe
-          release/*.exe
+        path: release/*.exe
         if-no-files-found: error
         retention-days: 30
 
@@ -48,7 +46,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "release/**/*.exe,release/*.exe"
+        artifacts: "release/*.exe"
         tag: v${{ github.run_number }}
         name: Release v${{ github.run_number }}
         body: |
