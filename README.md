@@ -143,4 +143,37 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ---
 
+## Development Notes (For AI Assistants)
+
+### Project Context
+- **Framework**: React 18 + TypeScript + Electron + Vite
+- **UI Style**: Neo-Brutalist (toxic green #00FF00, sharp yellow #FFFF00, thick borders, hard shadows)
+- **Build**: `npm run build` (tsc + vite), `npm run electron:build:win` (full Windows app)
+- **Dev**: `npm run dev` (starts Vite dev server + Electron)
+
+### Key Files
+| File | Purpose |
+|------|---------|
+| `src/App.tsx` | Main UI with mode selector, weapon dropdown, loadout display |
+| `src/engine/loadoutGenerator.ts` | Core logic for generating loadouts based on mode/weapon |
+| `src/data/weapons.json` | Weapon database with attachments |
+| `src/types.ts` | TypeScript interfaces |
+| `.github/workflows/build-windows.yml` | CI/CD - auto-builds on push to main |
+
+### Common Tasks
+- **Add weapon**: Edit `src/data/weapons.json`, follow existing structure
+- **Change UI style**: Modify `src/index.css` CSS variables
+- **Update build**: Edit `package.json` build scripts or `vite.config.ts`
+- **Fix TypeScript**: Run `npx tsc --noEmit` to check errors
+- **Git push**: Already configured for `https://github.com/jamesdunnington/codm-loadout-strategist.git`
+
+### Build Outputs
+- `dist/` - React production build
+- `dist-electron/` - Electron main/preload compiled
+- `release/` - Final `.exe` files (from electron-builder)
+
+### Known Warnings (Safe to Ignore)
+- CSS inline style warnings from Microsoft Edge Tools extension (cosmetic only)
+- Vite CJS deprecation notice (informational)
+
 **Disclaimer**: This application does not interact with CODM game files or memory. All loadouts are generated for manual entry into the game.
