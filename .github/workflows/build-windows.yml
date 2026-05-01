@@ -12,50 +12,56 @@ jobs:
     runs-on: windows-latest
     permissions:
       contents: write
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    
+
     - name: Install dependencies
       run: npm ci
-    
+
     - name: Build app
       run: npm run electron:build:win
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+
+    - name: List release output
+      run: Get-ChildItem -Path release -Recurse -ErrorAction SilentlyContinue | Select-Object FullName, Length
+      shell: pwsh
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: windows-app
-        path: release/*.exe
-        if-no-files-found: warn
+        path: |
+          release/**/*.exe
+          release/*.exe
+        if-no-files-found: error
         retention-days: 30
-    
+
     - name: Create Release
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "release/*.exe"
+        artifacts: "release/**/*.exe,release/*.exe"
         tag: v${{ github.run_number }}
         name: Release v${{ github.run_number }}
         body: |
           CODM Loadout Strategist - Windows Build
-          
+
           ## Downloads
           - **CODM Loadout Strategist Setup.exe** - Installer version
           - **CODM Loadout Strategist.exe** - Portable version
-          
+
           ## Installation
           1. Download the Setup.exe for installation
           2. Or download the portable .exe to run without installing
-          
+
           Built from commit: ${{ github.sha }}
         draft: false
         prerelease: false
