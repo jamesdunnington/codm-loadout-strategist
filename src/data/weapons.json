@@ -526,6 +526,137 @@
       }
     }
   ],
+  "pistols": [
+    {
+      "id": "j358",
+      "name": "J358",
+      "tier": "S",
+      "base_stats": {
+        "damage": 90,
+        "range": 30,
+        "mobility": 88,
+        "accuracy": 58,
+        "fire_rate": 40,
+        "control": 62
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Tactical Suppressor", "stats": {"range": 3, "ads_speed": 2} },
+          { "name": "Compensator", "stats": {"control": 6, "mobility": -2} }
+        ],
+        "barrel": [
+          { "name": "Light Barrel", "stats": {"ads_speed": 6, "mobility": 4} },
+          { "name": "Extended Barrel", "stats": {"range": 8, "ads_speed": -3} }
+        ],
+        "optic": [
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} },
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Rubberized Grip", "stats": {"control": 5, "ads_speed": 1} }
+        ],
+        "magazine": [
+          { "name": "Speed Loader", "stats": {"reload_speed": 12, "mobility": 1} }
+        ],
+        "stock": []
+      }
+    },
+    {
+      "id": "50gs",
+      "name": ".50 GS",
+      "tier": "A",
+      "base_stats": {
+        "damage": 88,
+        "range": 35,
+        "mobility": 82,
+        "accuracy": 55,
+        "fire_rate": 38,
+        "control": 58
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "Monolithic Suppressor", "stats": {"range": 5, "control": 3, "mobility": -2} },
+          { "name": "RTC Compensator", "stats": {"control": 6, "mobility": -2} }
+        ],
+        "barrel": [
+          { "name": "Light Barrel", "stats": {"ads_speed": 6, "mobility": 4} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} },
+          { "name": "Classic Red Dot", "stats": {"ads_speed": -2} }
+        ],
+        "underbarrel": [
+          { "name": "Rubberized Grip", "stats": {"control": 5, "ads_speed": 1} }
+        ],
+        "magazine": [
+          { "name": "Speed Loader", "stats": {"reload_speed": 12, "mobility": 1} },
+          { "name": "Extended Mag", "stats": {"mobility": -2} }
+        ],
+        "stock": []
+      }
+    },
+    {
+      "id": "mw11",
+      "name": "MW11",
+      "tier": "A",
+      "base_stats": {
+        "damage": 78,
+        "range": 32,
+        "mobility": 90,
+        "accuracy": 60,
+        "fire_rate": 55,
+        "control": 65
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} },
+          { "name": "Tactical Suppressor", "stats": {"range": 3, "ads_speed": 2} }
+        ],
+        "barrel": [
+          { "name": "Light Barrel", "stats": {"ads_speed": 6, "mobility": 4} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [
+          { "name": "Rubberized Grip", "stats": {"control": 5, "ads_speed": 1} }
+        ],
+        "magazine": [
+          { "name": "Speed Loader", "stats": {"reload_speed": 12, "mobility": 1} }
+        ],
+        "stock": []
+      }
+    },
+    {
+      "id": "renetti",
+      "name": "Renetti",
+      "tier": "B",
+      "base_stats": {
+        "damage": 72,
+        "range": 28,
+        "mobility": 92,
+        "accuracy": 52,
+        "fire_rate": 75,
+        "control": 55
+      },
+      "attachments": {
+        "muzzle": [
+          { "name": "OWC Light Suppressor", "stats": {"ads_speed": 5, "mobility": 3} }
+        ],
+        "barrel": [
+          { "name": "Light Barrel", "stats": {"ads_speed": 6, "mobility": 4} }
+        ],
+        "optic": [
+          { "name": "Iron Sights", "stats": {"ads_speed": 2} }
+        ],
+        "underbarrel": [],
+        "magazine": [
+          { "name": "Extended Mag", "stats": {"mobility": -2} }
+        ],
+        "stock": []
+      }
+    }
+  ],
   "marksman_rifles": [
     {
       "id": "spr208",

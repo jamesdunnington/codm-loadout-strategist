@@ -63,6 +63,8 @@ export interface Wildcard {
 export interface GeneratedLoadout {
   weapon: Weapon;
   attachments: LoadoutAttachment[];
+  secondary: Weapon;
+  secondaryAttachments: LoadoutAttachment[];
   perks: {
     red: Perk;
     green: Perk;

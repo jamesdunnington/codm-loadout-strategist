@@ -203,6 +203,28 @@ function App() {
               </div>
             </div>
 
+            {/* Secondary Weapon */}
+            <div style={styles.section}>
+              <h3 style={styles.sectionHeader}>SECONDARY WEAPON</h3>
+              <div style={styles.secondaryCard}>
+                <div style={styles.weaponInfo}>
+                  <span style={{...styles.tierBadge, ...getTierBadgeStyle(loadout.secondary.tier)}}>
+                    {loadout.secondary.tier}-TIER
+                  </span>
+                  <span style={styles.secondaryName}>{loadout.secondary.name}</span>
+                  <span style={{...styles.modeTag, borderColor: '#FFFF00', color: '#FFFF00'}}>SECONDARY</span>
+                </div>
+                <div style={styles.attachmentsGrid}>
+                  {loadout.secondaryAttachments.map((att, idx) => (
+                    <div key={idx} style={styles.attachmentCard}>
+                      <div style={styles.attachmentSlot}>{att.slot.toUpperCase()}</div>
+                      <div style={styles.attachmentName}>{att.name}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {/* Wildcard */}
             <div style={styles.section}>
               <h3 style={styles.sectionHeader}>WILDCARD</h3>
@@ -557,6 +579,21 @@ const styles: Record<string, React.CSSProperties> = {
   perkDesc: {
     fontSize: '0.8rem',
     color: '#888',
+  },
+  secondaryCard: {
+    backgroundColor: '#0a0a0a',
+    border: '2px solid #FFFF00',
+    padding: '15px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
+  },
+  secondaryName: {
+    fontSize: '1.3rem',
+    fontWeight: 900,
+    color: '#FFFF00',
+    textTransform: 'uppercase' as const,
+    letterSpacing: '2px',
   },
   wildcardCard: {
     backgroundColor: '#0a0a0a',

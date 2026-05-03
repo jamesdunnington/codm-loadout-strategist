@@ -119,19 +119,18 @@ function selectRandomWeapon(weapons: Weapon[]): Weapon {
   return weapons[0];
 }
 
-function selectAttachmentsForMode(weapon: Weapon, mode: PlayMode): LoadoutAttachment[] {
+function selectAttachmentsForMode(weapon: Weapon, mode: PlayMode, maxCount = 5): LoadoutAttachment[] {
   const config = modeConfigs[mode];
   const selected: LoadoutAttachment[] = [];
-  
+
   // Always prioritize based on mode
   const slotPriority = Object.entries(config.attachment_focus)
     .sort(([, a], [, b]) => b - a)
     .map(([slot]) => slot);
-  
-  // Select up to 5 attachments
+
   let count = 0;
   for (const slot of slotPriority) {
-    if (count >= 5) break;
+    if (count >= maxCount) break;
     
     const attachments = weapon.attachments[slot as keyof typeof weapon.attachments];
     if (!attachments || attachments.length === 0) continue;
@@ -180,6 +179,21 @@ function selectAttachmentsForMode(weapon: Weapon, mode: PlayMode): LoadoutAttach
   }
   
   return selected;
+}
+
+function selectSecondaryWeapon(mode: PlayMode): Weapon {
+  const pistols = (weaponsData as unknown as Record<string, Weapon[]>)['pistols'] || [];
+
+  // Stealth and tactical prefer A-tier (MW11 has suppressors); rush/aggro prefer S-tier punch
+  const tierOrder = (mode === 'stealth' || mode === 'tactical')
+    ? ['A', 'S', 'B']
+    : ['S', 'A', 'B'];
+
+  const sorted = [...pistols].sort((a, b) =>
+    tierOrder.indexOf(a.tier) - tierOrder.indexOf(b.tier)
+  );
+
+  return selectRandomWeapon(sorted);
 }
 
 function selectPerksForMode(mode: PlayMode): { red: Perk; green: Perk; blue: Perk } {
@@ -276,19 +290,25 @@ export function generateLoadout(mode: PlayMode, weaponId?: string): GeneratedLoa
   
   // 3. Select attachments
   const attachments = selectAttachmentsForMode(weapon, mode);
-  
-  // 4. Select perks
+
+  // 4. Select secondary weapon (pistol) with up to 3 attachments
+  const secondary = selectSecondaryWeapon(mode);
+  const secondaryAttachments = selectAttachmentsForMode(secondary, mode, 3);
+
+  // 5. Select perks
   const perks = selectPerksForMode(mode);
-  
-  // 5. Select scorestreaks
+
+  // 6. Select scorestreaks
   const scorestreaks = selectScorestreaksForMode(mode);
-  
-  // 6. Select wildcard
+
+  // 7. Select wildcard
   const wildcard = selectWildcardForMode(mode);
-  
+
   return {
     weapon,
     attachments,
+    secondary,
+    secondaryAttachments,
     perks,
     wildcard,
     scorestreaks,
@@ -325,10 +345,13 @@ export function formatLoadoutForExport(loadout: GeneratedLoadout): string {
   const lines = [
     `=== CODM LOADOUT [${loadout.mode.toUpperCase()}] ===`,
     ``,
-    `WEAPON: ${loadout.weapon.name} (${loadout.weapon.tier}-Tier)`,
-    ``,
+    `PRIMARY: ${loadout.weapon.name} (${loadout.weapon.tier}-Tier)`,
     `ATTACHMENTS:`,
     ...loadout.attachments.map(a => `  - ${a.slot.toUpperCase()}: ${a.name}`),
+    ``,
+    `SECONDARY: ${loadout.secondary.name} (${loadout.secondary.tier}-Tier)`,
+    `ATTACHMENTS:`,
+    ...loadout.secondaryAttachments.map(a => `  - ${a.slot.toUpperCase()}: ${a.name}`),
     ``,
     `WILDCARD: ${loadout.wildcard.name}`,
     `  > ${loadout.wildcard.description}`,
